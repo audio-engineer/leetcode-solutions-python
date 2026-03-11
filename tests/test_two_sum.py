@@ -19,7 +19,7 @@ from leetcode.two_sum_hash import Solution as HashTableSolution
         ([3, 3], 6, [0, 1]),
     ],
 )
-def test_two_sum_brute(nums: List[int], target: int, expected: int) -> None:
+def test_two_sum_brute(nums: List[int], target: int, expected: list[int]) -> None:
     assert expected == BruteForceSolution().twoSum(nums, target)
 
 
@@ -31,5 +31,5 @@ def test_two_sum_brute(nums: List[int], target: int, expected: int) -> None:
         ([3, 3], 6, [0, 1]),
     ],
 )
-def test_two_sum_hash(nums: List[int], target: int, expected: int) -> None:
+def test_two_sum_hash(nums: List[int], target: int, expected: list[int]) -> None:
     assert expected == HashTableSolution().twoSum(nums, target)
