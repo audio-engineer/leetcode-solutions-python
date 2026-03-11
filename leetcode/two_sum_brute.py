@@ -9,7 +9,9 @@ from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i, num_i in enumerate(nums):
-            sliced_nums = nums[i + 1 :]
+            next_i = i + 1
+
+            sliced_nums = nums[next_i:]
 
             for j, num_j in enumerate(sliced_nums):
                 if num_i + num_j == target:
