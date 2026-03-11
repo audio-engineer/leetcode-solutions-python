@@ -37,10 +37,11 @@ ignore = [
     "UP035",
     "UP006",
     "N802",
+    "D107",
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*.py" = ["S101", "FBT001"]
+"tests/*.py" = ["S101", "FBT001", "PLR2004"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

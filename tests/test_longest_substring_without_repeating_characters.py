@@ -5,7 +5,7 @@ https://leetcode.com/problems/longest-substring-without-repeating-characters/des
 
 import pytest
 
-from leetcode.longest_substring import Solution
+from leetcode.longest_substring_without_repeating_characters import Solution
 
 
 @pytest.mark.parametrize(
