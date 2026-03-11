@@ -1,0 +1,31 @@
+name: CI
+on: pull_request
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Set Up uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+      - name: Install Dependencies
+        run: uv sync --frozen --all-extras
+      - name: Run isort
+        run: uv run isort -c --diff .
+      - name: Run Black
+        run: uv run black --check --diff .
+      - name: Run Ruff
+        run: uv run ruff check
+      - name: Run ty
+        run: uv run ty check
+      - name: Run mypy
+        run: uv run mypy
+      - name: Run Pylint
+        run: uv run pylint leetcode tests
+      - name: Run Flake8
+        run: uv run flake8 .
+      - name: Run pytest
+        run: uv run pytest --cov app --cov-report term-missing
