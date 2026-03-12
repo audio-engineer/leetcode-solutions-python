@@ -28,4 +28,4 @@ jobs:
       - name: Run Flake8
         run: uv run flake8 .
       - name: Run pytest
-        run: uv run pytest --cov app --cov-report term-missing
+        run: uv run pytest --cov leetcode --cov-report term-missing
