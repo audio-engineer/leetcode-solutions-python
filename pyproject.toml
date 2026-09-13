@@ -8,23 +8,11 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "black>=26.3.0",
-    "flake8>=7.3.0",
-    "isort>=8.0.1",
-    "mypy>=1.19.1",
-    "pylint>=4.0.5",
+    "basedpyright>=1.38.3",
     "pytest>=9.0.2",
     "pytest-cov>=7.0.0",
     "ruff>=0.15.5",
-    "ty>=0.0.21",
 ]
-
-[tool.isort]
-profile = "black"
-
-[tool.mypy]
-files = "**/*.py"
-strict = true
 
 [tool.ruff.lint]
 select = ["ALL"]
@@ -46,6 +34,3 @@ ignore = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
-
-[tool.pylint.'MESSAGES CONTROL']
-disable = "missing-class-docstring, missing-function-docstring, too-few-public-methods, invalid-name, too-many-boolean-expressions"
